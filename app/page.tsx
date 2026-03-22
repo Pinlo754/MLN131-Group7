@@ -11,10 +11,12 @@ import { useChatStore } from '@/lib/stores/chatStore';
 import { useVoiceStore } from '@/lib/stores/voiceStore';
 import { useNavStore } from '@/lib/stores/navStore';
 
+
+
 export default function Home() {
   const { loadConversations } = useChatStore();
   const { toggleVoiceAssistant } = useVoiceStore();
-  const { currentPage } = useNavStore();
+  const { currentPage, setCurrentPage } = useNavStore();
 
   // Load conversations from storage on mount
   useEffect(() => {
@@ -44,9 +46,9 @@ export default function Home() {
 
         {/* Content - History or Chat */}
         {currentPage === 'history' ? (
-          <HistoryPage />
+          <HistoryPage key="history" setCurrentPage={setCurrentPage} />
         ) : (
-          <ChatContainer onVoiceClick={toggleVoiceAssistant} />
+          <ChatContainer key="chat" onVoiceClick={toggleVoiceAssistant} />
         )}
       </div>
 

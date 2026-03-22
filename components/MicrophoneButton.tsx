@@ -22,13 +22,13 @@ export function MicrophoneButton() {
   const getStatusText = (status: VoiceStatus) => {
     switch (status) {
       case 'LISTENING':
-        return 'Listening...';
+        return 'Đang lắng nghe...';
       case 'PROCESSING':
-        return 'Processing...';
+        return 'Đang xử lý...';
       case 'SPEAKING':
-        return 'Speaking...';
+        return 'Đang nói...';
       default:
-        return 'Start voice conversation';
+        return 'Bắt đầu trò chuyện';
     }
   };
 

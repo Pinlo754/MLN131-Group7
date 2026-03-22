@@ -99,7 +99,7 @@ export function ChatContainer({ onVoiceClick }: ChatContainerProps) {
       <div className="border-b border-border bg-card p-4 flex items-center justify-between">
         <div>
           <h1 className="text-lg font-semibold text-foreground">
-            {conversation?.title || 'New Conversation'}
+            {conversation?.title || 'Hội thoại mới'}
           </h1>
           <p className="text-xs text-muted-foreground mt-1">
             Dưới đây là phản hồi từ AI, vui lòng xác thực thông tin trước khi tiếp nhận!

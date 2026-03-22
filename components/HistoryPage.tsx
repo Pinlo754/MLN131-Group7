@@ -5,7 +5,11 @@ import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { historyContentData, HistoryContent as HistoryContentType } from '@/lib/historyContent';
 
-export function HistoryPage() {
+interface HistoryPageProps {
+  setCurrentPage: (page: 'chat' | 'history') => void;
+}
+
+export function HistoryPage({setCurrentPage }: HistoryPageProps) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
 
   const toggleSection = (id: string) => {
@@ -187,7 +191,9 @@ export function HistoryPage() {
             <p className="text-foreground/70 mb-4">
               Sử dụng trợ lý AI hoặc công cụ tìm kiếm bằng giọng nói để khám phá những chủ đề liên quan
             </p>
-            <button className="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium">
+            <button className="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
+            onClick={() => setCurrentPage('chat')}
+            >
               Mở Chat AI
             </button>
           </div>

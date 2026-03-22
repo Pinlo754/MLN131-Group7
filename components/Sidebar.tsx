@@ -66,7 +66,7 @@ export function Sidebar() {
               className="w-full gap-2 bg-primary hover:bg-primary/90"
             >
               <Plus size={18} />
-              New Conversation
+              Đoạn hội thoại mới
             </Button>
           </div>
 

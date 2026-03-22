@@ -67,7 +67,7 @@ export function ChatInput({
               size="icon"
               variant="outline"
               disabled={isLoading || disabled}
-              title="Use voice input"
+              title="Sử dụng micro"
             >
               <Mic size={18} />
             </Button>
@@ -77,14 +77,14 @@ export function ChatInput({
             disabled={!message.trim() || isLoading || disabled}
             size="icon"
             className="bg-primary hover:bg-primary/90"
-            title="Send message (Enter)"
+            title="Gửi tin nhắn (Enter)"
           >
             <Send size={18} />
           </Button>
         </div>
       </div>
       <p className="text-xs text-muted-foreground">
-        Press Enter to send, Shift+Enter for new line
+        Nhấn Enter để gửi, Shift + Enter để xuống dòng
       </p>
     </div>
   );
