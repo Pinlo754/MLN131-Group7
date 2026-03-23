@@ -91,3 +91,28 @@ export const useGeminiChat = () => {
 
   return { sendMessage, isConfigured };
 };
+
+const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY!);
+
+export async function analyzePDF(formData: FormData) {
+  const file = formData.get("pdf") as File;
+  if (!file) throw new Error("Không tìm thấy file");
+
+  // Chuyển đổi file sang Base64
+  const bytes = await file.arrayBuffer();
+  const base64Data = Buffer.from(bytes).toString("base64");
+
+  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+
+  const result = await model.generateContent([
+    {
+      inlineData: {
+        data: base64Data,
+        mimeType: "application/pdf",
+      },
+    },
+    "Hãy tóm tắt nội dung tài liệu này bằng tiếng Việt.",
+  ]);
+
+  return result.response.text();
+}
