@@ -55,7 +55,7 @@ export function ChatInput({
           value={message}
           onChange={e => setMessage(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Hỏi về tôn giáo và chủ nghĩa xã hội... (Shift+Enter để xuống dòng)"
+          placeholder="Hỏi về lịch sử đảng... (Shift+Enter để xuống dòng)"
           disabled={isLoading || disabled}
           className="flex-1 bg-input border border-border rounded-lg px-4 py-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed max-h-30"
           rows={1}

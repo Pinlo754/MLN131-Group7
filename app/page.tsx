@@ -25,8 +25,8 @@ export default function Home() {
 
   const getPageTitle = () => {
     return currentPage === 'history'
-      ? 'Tôn giáo trong Xã hội Chủ nghĩa'
-      : 'Religion & Socialism Learning Platform';
+      ? 'Mindmap 1858-1930'
+      : 'Chatbot AI hỗ trợ mindmap';
   };
 
   return (

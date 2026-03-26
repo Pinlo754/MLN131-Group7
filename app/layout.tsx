@@ -8,9 +8,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Tôn giáo & Xã hội - Learning Platform',
-  description: 'Nền tảng học tập tương tác với AI để khám phá tôn giáo trong quá độ lên chủ nghĩa xã hội',
-  generator: 'v0.app',
+  title: 'Mindmap',
+  description: 'Mindmap',
   icons: {
     icon: [
       {

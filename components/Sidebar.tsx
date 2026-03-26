@@ -38,7 +38,7 @@ export function Sidebar() {
             }`}
           >
             <BookOpen size={18} />
-            <span className="hidden sm:inline">Lịch sử</span>
+            <span className="hidden sm:inline">Mindmap</span>
           </button>
           <button
             onClick={() => {
@@ -73,7 +73,7 @@ export function Sidebar() {
           <div className="flex-1 overflow-y-auto">
             {conversations.length === 0 ? (
               <div className="p-4 text-center text-muted-foreground text-sm">
-                No conversations yet. Start a new one!
+                Chưa có lịch sử hội thoại, hãy bắt đầu!!
               </div>
             ) : (
               <nav className="space-y-2 p-2">

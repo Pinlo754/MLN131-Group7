@@ -24,7 +24,7 @@ export function MessageList({ messages, isLoading = false }: MessageListProps) {
         <div className="text-muted-foreground">
           <h2 className="text-lg font-semibold mb-2">Chào mừng bạn đến với hành trình học tập</h2>
           <p className="text-sm">
-            Hãy bắt đầu một cuộc trò chuyện để khám phá tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội.
+            Hãy bắt đầu một cuộc trò chuyện để được giải thích rõ hơn về nội dung lịch sử đảng giai đoạn 1858-1930.
             Đặt câu hỏi, tìm kiếm sự giải thích và nâng cao hiểu biết của bạn.
           </p>
         </div>
@@ -42,7 +42,7 @@ export function MessageList({ messages, isLoading = false }: MessageListProps) {
         <div className="flex justify-start mb-4">
           <div className="bg-card border border-border rounded-lg rounded-bl-none px-4 py-3 flex items-center gap-2">
             <Spinner />
-            <span className="text-sm text-muted-foreground">AI is thinking...</span>
+            <span className="text-sm text-muted-foreground">AI đang suy nghĩ</span>
           </div>
         </div>
       )}
