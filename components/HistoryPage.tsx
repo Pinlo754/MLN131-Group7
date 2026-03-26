@@ -75,16 +75,8 @@ export function HistoryPage({ setCurrentPage }: HistoryPageProps) {
 
   return (
     <div className="flex-1 flex flex-col h-full bg-background overflow-hidden">
-      <main className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
-        <h1 className="text-3xl font-bold mb-6 text-gray-800">
-          Canva Slide Embed
-        </h1>
-
+      <main className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
         <CanvaFrame />
-
-        <p className="mt-6 text-gray-500 text-sm">
-          Slide được nhúng bằng iframe + Tailwind CSS
-        </p>
       </main>
     </div>
   );
